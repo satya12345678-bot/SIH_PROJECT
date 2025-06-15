@@ -168,7 +168,3 @@ For any questions or collaborations:
 
 ---
 
-```
-
----
-
