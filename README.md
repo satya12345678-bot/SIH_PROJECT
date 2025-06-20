@@ -152,7 +152,6 @@ Team Members:
 * Arkadip Ghara *(ML Engineer)*
 * Siddharth Patel *(Finance Analyst)*
 * Satyabratta Biswal *(Pitch Deck creator)*
-* \[Add others if applicable]
 
 ---
 
@@ -166,8 +165,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 For any questions or collaborations:
 * 📧 [MridulChouhan@example.com](mailto:strangemridul@gmail.com) *(replace with actual)*
-* 📧 [anikpanja@example.com](mailto:anikpanja362@example.com) 
-* 📌 GitHub Issues tab for bug reports or suggestions
+* 📧 [anikpanja362@gmail.com](mailto:anikpanja362@example.com) 
 
 ---
 
