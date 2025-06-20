@@ -147,8 +147,11 @@ The `presentation/` folder contains the final PDF/PPT submission made for **SIH 
 
 **Xebec's Crew – SIH 2024**
 Team Members:
-
-* Anik Panja *(Lead Developer & ML Engineer)*
+* Mridul Chouhan *(Team Leader)*
+* Anik Panja *(ML Engineer)*
+* Arkadip Ghara *(ML Engineer)*
+* Siddharth Patel *(Finance Analyst)*
+* Satyabratta Biswal *(Pitch Deck creator)*
 * \[Add others if applicable]
 
 ---
@@ -162,8 +165,8 @@ This project is licensed under the [MIT License](LICENSE).
 ## 📬 Contact
 
 For any questions or collaborations:
-
-* 📧 [anikpanja@example.com](mailto:anikpanja362@example.com) *(replace with actual)*
+* 📧 [MridulChouhan@example.com](mailto:strangemridul@gmail.com) *(replace with actual)*
+* 📧 [anikpanja@example.com](mailto:anikpanja362@example.com) 
 * 📌 GitHub Issues tab for bug reports or suggestions
 
 ---
