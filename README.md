@@ -105,7 +105,7 @@ reports/figures/
 
 ## 🖼️ Sample Visualizations
 
-You can find screenshots and output plots inside the `reports/figures/` folder. These illustrate trends, predictions vs actual values, model evaluation metrics, etc.
+You can find screenshots and output plots inside the `reports/figures/` folder. These illustrate the trends, predictions vs actual values, model evaluation metrics, etc.
 
 ---
 
