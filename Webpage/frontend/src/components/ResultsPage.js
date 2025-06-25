@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'; // ⬅️ added
+import { Link } from 'react-router-dom';
 import './ResultsPage.css';
 
 export default function ResultsPage() {
@@ -7,7 +7,7 @@ export default function ResultsPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://sih-project-1647-team-xebecs-crew.onrender.com')
+    fetch('https://sih-project-1647-team-xebecs-crew.onrender.com/results')
       .then(res => res.json())
       .then(data => {
         setResults(data);
@@ -40,7 +40,6 @@ export default function ResultsPage() {
           </ul>
         )}
 
-        {/* Home Button */}
         <Link to="/" className="home-button">Back</Link>
       </div>
     </div>
