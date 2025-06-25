@@ -7,7 +7,7 @@ export default function ResultsPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:5000/results')
+    fetch('https://sih-project-1647-team-xebecs-crew.onrender.com')
       .then(res => res.json())
       .then(data => {
         setResults(data);
