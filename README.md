@@ -17,9 +17,9 @@ This project focuses on predicting market prices of vegetables using historical 
 ## 📁 Project Structure
 
 ```bash
-SIH_PROJECT/
+SIH_PROJECT//
 │
-├── data/
+├── data//
 │   ├── raw/                       # Original input files (CSV, PDFs)
 │   │   └── kalimati_tarkari_dataset.csv
 │   │   └── SIH2024_1647_Xebec's_Crew.pdf
