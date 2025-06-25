@@ -2,8 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
-import './AdminPanel.css'; // ⬅️ Import the CSS
+import './AdminPanel.css';
 import { Link } from 'react-router-dom';
+
+const BACKEND_URL = 'https://sih-project-1647-team-xebecs-crew.onrender.com';
 
 export default function AdminPanel() {
   const [dataset, setDataset] = useState('');
@@ -13,7 +15,7 @@ export default function AdminPanel() {
   const [existing, setExisting] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/results')
+    fetch(`${BACKEND_URL}/results`)
       .then(res => res.json())
       .then(data => setExisting(data))
       .catch(() => setMsg("Failed to load results from server"));
@@ -32,7 +34,7 @@ export default function AdminPanel() {
     }
 
     try {
-      const res = await fetch('https://sih-project-1647-team-xebecs-crew.onrender.com', {
+      const res = await fetch(`${BACKEND_URL}/post-result`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: dataset, buy, sell })
@@ -40,7 +42,7 @@ export default function AdminPanel() {
 
       if (res.ok) {
         setMsg('Result added!');
-        const updated = await fetch('http://localhost:5000/results').then(r => r.json());
+        const updated = await fetch(`${BACKEND_URL}/results`).then(r => r.json());
         setExisting(updated);
         setDataset(''); setBuy(''); setSell('');
       } else {
@@ -57,7 +59,7 @@ export default function AdminPanel() {
     if (!confirmDelete) return;
 
     try {
-      const resp = await fetch(`http://localhost:5000/delete-result/${id}`, {
+      const resp = await fetch(`${BACKEND_URL}/delete-result/${id}`, {
         method: 'DELETE'
       });
 
@@ -96,9 +98,11 @@ export default function AdminPanel() {
         </form>
 
         {msg && <p className="status-msg">{msg}</p>}
- <Link to="/" className="green-button">
-  Back
-</Link>
+
+        <Link to="/" className="green-button">
+          Back
+        </Link>
+
         <h3>Current Entries</h3>
         {existing.length === 0 ? (
           <p>No results yet.</p>
