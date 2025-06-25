@@ -2,9 +2,10 @@ numpy
 pandas
 matplotlib
 scikit-learn
-tensorflow
-statsmodels
-pmdarima
+catboost
 jupyter
 seaborn
 scipy
+# Optional: for time series/arima if still needed
+# statsmodels
+# pmdarima

@@ -1,157 +1,73 @@
 ````markdown
-# 📈 Crop Price Prediction System - SIH 2024
+# 🎮 FPS Prediction for Gaming Hardware
 
-Welcome to the **Crop Price Prediction System**, a data science and machine learning project developed for the **Smart India Hackathon (SIH) 2024** by team **Xebec's Crew**.
-
-This project focuses on predicting market prices of vegetables using historical data and time-series modeling techniques, with the ultimate goal of helping farmers make informed decisions on crop sales and logistics.
+Welcome to the **FPS Prediction System**, a personal machine learning project focused on predicting **Frames Per Second (FPS)** for various gaming hardware and game settings. This project enables users to estimate gaming performance based on system specifications and game configurations, helping make smarter hardware and gaming decisions.
 
 ---
 
-## 🧠 Problem Statement
+## 🧩 Problem Statement
 
-**Domain:** Agriculture & Market Linkage  
-**Challenge:** Predict future vegetable market prices using past data to support price transparency, optimize supply-chain decisions, and minimize post-harvest losses.
+**Goal:**  
+Predict the FPS for a given combination of CPU, GPU, and game settings using historical benchmark data.  
+**Use Case:**  
+Empower gamers and hardware enthusiasts to estimate expected performance before making purchases or changing settings.
 
 ---
 
-## 📁 Project Structure
+## 🗂️ Project Structure
 
-```bash
-SIH_PROJECT//
+```
+SIH_PROJECT/
 │
-├── data//
-│   ├── raw/                       # Original input files (CSV, PDFs)
-│   │   └── kalimati_tarkari_dataset.csv
-│   │   └── SIH2024_1647_Xebec's_Crew.pdf
+├── data/
+│   └── raw/                  # Original datasets (Train.csv, Test.csv, etc.)
 │
-├── reports/
-│   ├── figures/                  # Visualizations and model performance plots
-│   │   └── Screenshot_*.png
+├── notebooks/
+│   └── aiml-hackathon (3).ipynb   # Main project notebook (all logic here)
 │
-├── src/                          # Source code for data loading, modeling, utils
-│   ├── __init__.py
+├── src/
 │   ├── data_loader.py
 │   ├── preprocessing.py
-│   ├── arima_model.py
-│   ├── lstm_model.py
-│   └── utils.py
+│   ├── model.py
+│   ├── submission.py
+│   ├── split.py
+│   ├── utils.py
+│   └── (other helper modules as needed)
 │
-├── presentation/                # SIH submission and PPTs
-│   └── (Your final presentation slides or PDF)
-│
-├── LICENSE
+├── requirements.txt
 ├── README.md
-└── requirements.txt             # All Python dependencies
-````
-
----
-
-## 🔧 How to Run the Project
-
-### ⚙️ 1. Install Dependencies
-
-Make sure you are using Python 3.8+. Then run:
-
-```bash
-pip install -r requirements.txt
+└── LICENSE
 ```
 
----
+## 🛠️ Workflow Overview
 
-### 📥 2. Load and Preprocess the Data
+- **Data Loading & Exploration:**  
+  Loads training and test data, explores missing values and feature correlations.
 
-```bash
-python src/data_loader.py
-python src/preprocessing.py
-```
+- **Data Preprocessing:**  
+  Drops columns with excessive missing values, imputes missing data, identifies numeric and categorical columns.
 
----
+- **Feature Engineering & Encoding:**  
+  Explores encoding techniques for categorical variables (target, frequency, label encoding).  
+  CatBoost is used for its native categorical support.
 
-### 📊 3. Train Models
+- **Model Training & Evaluation:**  
+  - **CatBoostRegressor** is the primary model.
+  - XGBoost and LightGBM are also explored.
+  - Models are evaluated using RMSE and MSE.
 
-#### ARIMA Model:
-
-```bash
-python src/arima_model.py
-```
-
-#### LSTM Model:
-
-```bash
-python src/lstm_model.py
-```
+- **Prediction & Submission:**  
+  Retrains the best model on the full dataset, predicts FPS for the test set, and generates a submission CSV.
 
 ---
 
-### 📈 4. Visualize Results
+## 📊 Example Results
 
-All generated plots (model loss, price forecasts, trend analysis) will be saved in the:
-
-```bash
-reports/figures/
-```
-
----
-
-## 📌 Features
-
-* 📉 **ARIMA Model:** Classical time-series forecasting on crop price trends.
-* 🧠 **LSTM Model:** Deep learning approach for better long-term dependency capture.
-* 🧹 **Preprocessing Pipeline:** Normalization, time-indexing, and missing data handling.
-* 📊 **Visual Reporting:** Forecast and evaluation plots.
-* 📦 **Modular Codebase:** Separated scripts for easy testing and reusability.
-
----
-
-## 🖼️ Sample Visualizations
-
-You can find screenshots and output plots inside the `reports/figures/` folder. These illustrate the trends, predictions vs actual values, model evaluation metrics, etc.
-
----
-
-## 📂 Dataset
-
-We used the **Kalimati Tarkari Dataset** (publicly available), which contains:
-
-* Historical prices of vegetables
-* Market-level transaction volume
-* Timestamped entries from Kalimati market
-
-Path:
-`data/raw/kalimati_tarkari_dataset.csv`
-
----
-
-## 📑 Presentation
-
-The `presentation/` folder contains the final PDF/PPT submission made for **SIH 2024**, including:
-
-* Problem Statement
-* Proposed Solution
-* Architecture Diagrams
-* Model Performance & Results
-* Business Impact
-
----
-
-## ✅ Future Scope
-
-* Integrate with real-time APIs for live price predictions
-* Deploy as a web dashboard using **Streamlit** or **FastAPI**
-* Add more crops and markets across India
-* Use Reinforcement Learning for decision making
-
----
-
-## 👨‍💻 Authors & Team
-
-**Xebec's Crew – SIH 2024**
-Team Members:
-* Mridul Chouhan *(Team Leader)*
-* Anik Panja *(ML Engineer)*
-* Arkadip Ghara *(ML Engineer)*
-* Siddharth Patel *(Finance Analyst)*
-* Satyabratta Biswal *(Pitch Deck creator)*
+- **CatBoost** achieves the best results without explicit encoding or scaling.
+- **XGBoost** and **LightGBM** provide competitive baselines.
+- Test MSE (approximate):
+  - XGBoost: ~2487
+  - LightGBM: ~2462
 
 ---
 
@@ -163,9 +79,11 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 📬 Contact
 
-For any questions or collaborations:
-* 📧 [MridulChouhan@example.com](mailto:strangemridul@gmail.com) *(replace with actual)*
-* 📧 [anikpanja362@gmail.com](mailto:anikpanja362@example.com) 
+For questions or collaboration:
+- 📧 [anikpanja362@gmail.com](mailto:anikpanja362@gmail.com)
 
 ---
+
+> *Predicting gaming performance, empowering smarter hardware choices.*
+````
 
