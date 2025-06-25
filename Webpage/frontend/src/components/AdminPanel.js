@@ -32,7 +32,7 @@ export default function AdminPanel() {
     }
 
     try {
-      const res = await fetch('http://localhost:5000/post-result', {
+      const res = await fetch('https://sih-project-1647-team-xebecs-crew.onrender.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: dataset, buy, sell })
