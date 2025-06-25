@@ -1,16 +1,23 @@
 ````markdown
-# 🎮 FPS Prediction for Gaming Hardware
+# 🥑 Fruit Price Prediction Using RNN-LSTM & ARIMA
 
-Welcome to the **FPS Prediction System**, a personal machine learning project focused on predicting **Frames Per Second (FPS)** for various gaming hardware and game settings. This project enables users to estimate gaming performance based on system specifications and game configurations, helping make smarter hardware and gaming decisions.
+Welcome to the **Fruit Price Prediction System**, a machine learning project focused on forecasting fruit and vegetable prices using both classical and deep learning time series models. This project leverages the Kalimati Tarkari dataset and demonstrates a full workflow from data preprocessing to ARIMA and LSTM modeling, including anomaly detection with Bollinger Bands.
+
+---
+
+## 🏆 Hackathon Context
+
+This project was developed as part of the **Smart India Hackathon (SIH)**, where our team, **Xebec's Crew**, participated to address real-world agricultural challenges using data science and AI.
 
 ---
 
 ## 🧩 Problem Statement
 
 **Goal:**  
-Predict the FPS for a given combination of CPU, GPU, and game settings using historical benchmark data.  
+Predict the future average price of a selected fruit or vegetable using historical market data , and also send buffer stocks to places where needed.
+
 **Use Case:**  
-Empower gamers and hardware enthusiasts to estimate expected performance before making purchases or changing settings.
+Empower farmers, traders, and policymakers to anticipate price trends, optimize sales, and make informed decisions.
 
 ---
 
@@ -20,66 +27,65 @@ Empower gamers and hardware enthusiasts to estimate expected performance before 
 SIH_PROJECT/
 │
 ├── data/
-│   └── raw/                  # Original datasets (Train.csv, Test.csv, etc.)
+│   └── raw/
+│       └── kalimati_tarkari_dataset.csv   # Main dataset
 │
 ├── notebooks/
-│   └── aiml-hackathon (3).ipynb   # Main project notebook (all logic here)
+│   └── arima_lstm_model.ipynb             # Main notebook (all logic here)
 │
 ├── src/
 │   ├── data_loader.py
 │   ├── preprocessing.py
-│   ├── model.py
-│   ├── submission.py
-│   ├── split.py
-│   ├── utils.py
-│   └── (other helper modules as needed)
+│   ├── arima.py
+│   ├── lstm.py
+│   ├── bollinger.py
+│   └── main.py
 │
 ├── requirements.txt
 ├── README.md
-<<<<<<< HEAD
-└── requirements.txt             # All Python dependencies
-````
+└── .gitignore
+```
 
 ---
 
-## 📌 Features
+## 🛠️ Workflow Overview
 
-* 📉 **ARIMA Model:** Classical time-series forecasting on crop price trends.
-* 🧠 **LSTM Model:** Deep learning approach for better long-term dependency capture.
-* 🧹 **Preprocessing Pipeline:** Normalization, time-indexing, and missing data handling.
-* 📊 **Visual Reporting:** Forecast and evaluation plots.
-* 📦 **Modular Codebase:** Separated scripts for easy testing and reusability.
+- **Data Loading & Mapping:**  
+  Loads the Kalimati dataset and anonymizes commodity names using US state codes for demonstration.
+
+- **Preprocessing:**  
+  - Filters for a selected commodity (e.g., "NV")
+  - Groups by date and averages prices
+  - Handles missing values (forward fill)
+  - Splits into train/test sets
+
+- **Visualization:**  
+  - Plots time series and missing value diagnostics
+
+- **ARIMA Modeling:**  
+  - Stationarity checks (ADF test, differencing)
+  - Model fitting and forecasting
+  - Evaluation (MAE, relative error)
+  - Plots actual vs. forecasted prices
+
+- **LSTM Modeling:**  
+  - Windowed dataset creation for sequence learning
+  - Deep learning model with Conv1D + Bidirectional LSTM layers
+  - Learning rate scheduling and training
+  - Evaluation and forecast visualization
+
+- **Bollinger Bands & Anomaly Detection:**  
+  - Calculates moving average and bands
+  - Plots predictions with bands
+  - Identifies dates where predictions exceed normal volatility
 
 ---
 
-## 🖼️ Sample Visualizations
+## 📊 Example Results
 
-You can find screenshots and output plots inside the `reports/figures/` folder. These illustrate trends, predictions vs actual values, model evaluation metrics, etc.
-
----
-
-## 📂 Dataset
-
-We used the **Kalimati Tarkari Dataset** (publicly available), which contains:
-
-* Historical prices of vegetables
-* Market-level transaction volume
-* Timestamped entries from Kalimati market
-
-Path:
-`data/raw/kalimati_tarkari_dataset.csv`
-
----
-
-## 📑 Presentation
-
-The `presentation/` folder contains the final PDF/PPT submission made for **SIH 2024**, including:
-
-* Problem Statement
-* Proposed Solution
-* Architecture Diagrams
-* Model Performance & Results
-* Business Impact
+- **ARIMA** and **LSTM** models both provide price forecasts.
+- **Bollinger Bands** highlight periods of unusual price movement.
+- Evaluation metrics (e.g., MAE) are printed for both models.
 
 ---
 
@@ -94,45 +100,14 @@ The `presentation/` folder contains the final PDF/PPT submission made for **SIH 
 
 ## 👨‍💻 Authors & Team
 
-**Xebec's Crew – SIH 2024**
+**Xebec's Crew – SIH 2024**  
+
 Team Members:
-
-* Anik Panja *(Lead Developer & ML Engineer)*
-* \[Add others if applicable]
-=======
-└── LICENSE
-```
-
-## 🛠️ Workflow Overview
-
-- **Data Loading & Exploration:**  
-  Loads training and test data, explores missing values and feature correlations.
-
-- **Data Preprocessing:**  
-  Drops columns with excessive missing values, imputes missing data, identifies numeric and categorical columns.
-
-- **Feature Engineering & Encoding:**  
-  Explores encoding techniques for categorical variables (target, frequency, label encoding).  
-  CatBoost is used for its native categorical support.
-
-- **Model Training & Evaluation:**  
-  - **CatBoostRegressor** is the primary model.
-  - XGBoost and LightGBM are also explored.
-  - Models are evaluated using RMSE and MSE.
-
-- **Prediction & Submission:**  
-  Retrains the best model on the full dataset, predicts FPS for the test set, and generates a submission CSV.
-
----
-
-## 📊 Example Results
-
-- **CatBoost** achieves the best results without explicit encoding or scaling.
-- **XGBoost** and **LightGBM** provide competitive baselines.
-- Test MSE (approximate):
-  - XGBoost: ~2487
-  - LightGBM: ~2462
->>>>>>> 5adccb0af524c98154c26578eaa90fd3ef0acdc4
+* Mridul Chauhan (Team Leader)
+* Anik Panja *(Lead ML Engineer)*
+* Arkadip Ghara
+* Satyabrata Biswal
+* Siddharth Patel
 
 ---
 
@@ -149,6 +124,6 @@ For questions or collaboration:
 
 ---
 
-> *Predicting gaming performance, empowering smarter hardware choices.*
+> *Predicting agricultural prices, empowering smarter market decisions.*
 ````
 

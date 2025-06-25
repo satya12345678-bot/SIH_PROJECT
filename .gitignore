@@ -3,11 +3,4 @@ __pycache__/
 *.ipynb_checkpoints
 .env
 .DS_Store
-# Ignore Jupyter Notebook output and metadata
-*.nbconvert.ipynb
-# Ignore virtual environments
-venv/
-.env/
-# Ignore OS-specific files
-Thumbs.db
-# Ignore logs
+

@@ -46,6 +46,39 @@ def load_data(train_path: str, test_path: str) -> Tuple[pd.DataFrame, pd.DataFra
     test_df = pd.read_csv(test_path)
     return train_df, test_df
 
+def filter_commodity(df: pd.DataFrame, place: str) -> pd.DataFrame:
+    return df[df['Commodity'] == place]
+
+def group_and_average(df: pd.DataFrame) -> pd.DataFrame:
+    df = df.groupby('Date', as_index=False)['Average'].mean()
+    df['Date'] = pd.to_datetime(df['Date'])
+    df.set_index('Date', inplace=True)
+    return df
+
+def fill_missing(df: pd.DataFrame) -> pd.DataFrame:
+    return df.ffill()
+
+def split_train_test(df: pd.DataFrame, split_date: str):
+    df_train = df[df.index < split_date]
+    df_test = df[df.index >= split_date]
+    return df_train, df_test
+
+def window_train(series, window_size, batch_size, shuffle_buffer, tf):
+    dataset = tf.data.Dataset.from_tensor_slices(series)
+    dataset = dataset.window(window_size + 1, shift=1, stride=1, drop_remainder=True)
+    dataset = dataset.flat_map(lambda w: w.batch(window_size + 1))
+    dataset = dataset.map(lambda w: (w[:-1], w[-1]))
+    dataset = dataset.shuffle(shuffle_buffer)
+    dataset = dataset.batch(batch_size).prefetch(1)
+    return dataset
+
+def window_test(series, window_size, batch_size, tf):
+    dataset = tf.data.Dataset.from_tensor_slices(series)
+    dataset = dataset.window(window_size, shift=1, stride=1, drop_remainder=True)
+    dataset = dataset.flat_map(lambda w: w.batch(window_size))
+    dataset = dataset.batch(batch_size).prefetch(1)
+    return dataset
+
 # Remove the following lines from this module; they should be in your main script, not in preprocessing.py
 # train_df, test_df = load_data("../notebooks/Train.csv", "../notebooks/Test.csv")
 # Index = test_df['Index']
