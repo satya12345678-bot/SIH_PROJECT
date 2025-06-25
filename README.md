@@ -46,53 +46,6 @@ SIH_PROJECT/
 
 ---
 
-## 🔧 How to Run the Project
-
-### ⚙️ 1. Install Dependencies
-
-Make sure you are using Python 3.8+. Then run:
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-### 📥 2. Load and Preprocess the Data
-
-```bash
-python src/data_loader.py
-python src/preprocessing.py
-```
-
----
-
-### 📊 3. Train Models
-
-#### ARIMA Model:
-
-```bash
-python src/arima_model.py
-```
-
-#### LSTM Model:
-
-```bash
-python src/lstm_model.py
-```
-
----
-
-### 📈 4. Visualize Results
-
-All generated plots (model loss, price forecasts, trend analysis) will be saved in the:
-
-```bash
-reports/figures/
-```
-
----
-
 ## 📌 Features
 
 * 📉 **ARIMA Model:** Classical time-series forecasting on crop price trends.
