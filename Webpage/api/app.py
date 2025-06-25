@@ -8,7 +8,10 @@ load_dotenv()
 app = Flask(__name__)
 
 # Important: Proper CORS setup
-CORS(app, origins=["https://sih-project-self.vercel.app/"])
+CORS(app, origins=[
+    "https://sih-project-ih9o99pvu-mridul-77s-projects.vercel.app",
+    "https://sih-project.vercel.app"
+])
 
 # MongoDB setup
 MONGO_URI = os.getenv("MONGO_URI")
