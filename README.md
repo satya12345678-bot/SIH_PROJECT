@@ -30,7 +30,6 @@ SIH_PROJECT/
 │       │   ├── App.js
 │       │   └── index.js
 │       └── public/
-└── README.md
 ├── data/
 │   ├── raw/                       # Original input files (CSV, PDFs)
 │   │   └── kalimati_tarkari_dataset.csv
