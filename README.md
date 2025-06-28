@@ -234,7 +234,7 @@ The `presentation/` folder contains the final PDF/PPT submission made for **SIH 
 
 **Xebec's Crew – SIH 2024**
 Team Members:
-* Mridul Chouhan *(Team Leader)*
+* Mridul Chouhan *(Team Leader & Backend Developer)*
 * Anik Panja *(ML Engineer)*
 * Arkadip Ghara *(ML Engineer)*
 * Siddharth Patel *(Finance Analyst)*
