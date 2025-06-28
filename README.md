@@ -237,7 +237,7 @@ Team Members:
 * Mridul Chouhan *(Team Leader & Backend Developer)*
 * Anik Panja *(Lead ML Engineer)*
 * Arkadip Ghara *(ML Engineer)*
-* Siddharth Patel *(Finance Analyst)*
+* Siddharth Patel *(Finance Analyst & pitch deck creator)*
 * Satyabratta Biswal *(Frontend Developer)*
 
 ---
