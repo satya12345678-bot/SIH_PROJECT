@@ -1,20 +1,20 @@
-````markdown
-# 📈 Crop Price Prediction System - SIH 2024
 
-Welcome to the **Crop Price Prediction System**, a data science and machine learning project developed for the **Smart India Hackathon (SIH) 2024** by team **Xebec's Crew**.
+# 📈 Crop Price Prediction System + Web Interface to publish results - SIH 2024
 
-This project focuses on predicting market prices of vegetables using historical data and time-series modeling techniques, with the ultimate goal of helping farmers make informed decisions on crop sales and logistics.
+Welcome to the **Crop Price Prediction System + Web interface**, a data science, machine learning and Web development project developed for the **Smart India Hackathon (SIH) 2024** by team **Xebec's Crew**.
+
+This project focuses on predicting market prices of vegetables using historical data and time-series modeling techniques than publishing them on the website, with the ultimate goal of helping farmers and government to make informed decisions on crop sales and logistics.
 
 ---
 
-## 🧠 Problem Statement
+## Problem Statement
 
 **Domain:** Agriculture & Market Linkage  
-**Challenge:** Predict future vegetable market prices using past data to support price transparency, optimize supply-chain decisions, and minimize post-harvest losses.
+**Challenge:** Predict future vegetable market prices using past data to support price transparency, optimize supply-chain decisions, and provide an interface for the input and results.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```bash
 SIH_PROJECT/
@@ -46,9 +46,9 @@ SIH_PROJECT/
 
 ---
 
-## 🔧 How to Run the Project
+##  How to Run the Project
 
-### ⚙️ 1. Install Dependencies
+### 1. Install Dependencies
 
 Make sure you are using Python 3.8+. Then run:
 
@@ -58,7 +58,7 @@ pip install -r requirements.txt
 
 ---
 
-### 📥 2. Load and Preprocess the Data
+### 2. Load and Preprocess the Data
 
 ```bash
 python src/data_loader.py
@@ -67,7 +67,7 @@ python src/preprocessing.py
 
 ---
 
-### 📊 3. Train Models
+### 3. Train Models
 
 #### ARIMA Model:
 
@@ -93,23 +93,23 @@ reports/figures/
 
 ---
 
-## 📌 Features
+## Features
 
-* 📉 **ARIMA Model:** Classical time-series forecasting on crop price trends.
-* 🧠 **LSTM Model:** Deep learning approach for better long-term dependency capture.
-* 🧹 **Preprocessing Pipeline:** Normalization, time-indexing, and missing data handling.
-* 📊 **Visual Reporting:** Forecast and evaluation plots.
-* 📦 **Modular Codebase:** Separated scripts for easy testing and reusability.
+*    **ARIMA Model:** Classical time-series forecasting on crop price trends.
+*    **LSTM Model:** Deep learning approach for better long-term dependency capture.
+*    **Preprocessing Pipeline:** Normalization, time-indexing, and missing data handling.
+*    **Visual Reporting:** Forecast and evaluation plots.
+*    **Modular Codebase:** Separated scripts for easy testing and reusability.
 
 ---
 
-## 🖼️ Sample Visualizations
+## Sample Visualizations
 
 You can find screenshots and output plots inside the `reports/figures/` folder. These illustrate trends, predictions vs actual values, model evaluation metrics, etc.
 
 ---
 
-## 📂 Dataset
+## Dataset
 
 We used the **Kalimati Tarkari Dataset** (publicly available), which contains:
 
@@ -122,7 +122,7 @@ Path:
 
 ---
 
-## 📑 Presentation
+## Presentation
 
 The `presentation/` folder contains the final PDF/PPT submission made for **SIH 2024**, including:
 
@@ -134,16 +134,15 @@ The `presentation/` folder contains the final PDF/PPT submission made for **SIH 
 
 ---
 
-## ✅ Future Scope
+## Future Scope
 
-* Integrate with real-time APIs for live price predictions
-* Deploy as a web dashboard using **Streamlit** or **FastAPI**
+* Integrate the model into the Website.
 * Add more crops and markets across India
 * Use Reinforcement Learning for decision making
 
 ---
 
-## 👨‍💻 Authors & Team
+## Authors & Team
 
 **Xebec's Crew – SIH 2024**
 Team Members:
@@ -155,16 +154,16 @@ Team Members:
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## 📬 Contact
+## Contact
 
 For any questions or collaborations:
-* 📧 [MridulChouhan@example.com](mailto:strangemridul@gmail.com) *(replace with actual)*
+* 📧 [MridulChouhan@gmail.com](mailto:strangemridul@gmail.com)
 * 📧 [anikpanja362@gmail.com](mailto:anikpanja362@example.com) 
 
 ---
