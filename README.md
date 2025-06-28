@@ -53,7 +53,7 @@ SIH_PROJECT/
 - **Data Loading & Mapping:**  
   Loads the Kalimati dataset and anonymizes commodity names using US state codes for demonstration.
 
-- **Preprocessing:**  
+- **PreProcessing:**  
   - Filters for a selected commodity (e.g., "NV")
   - Groups by date and averages prices
   - Handles missing values (forward fill)
