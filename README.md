@@ -22,7 +22,7 @@ SIH_PROJECT/
 ├── Webpage/
 │   ├── api/                # Flask backend
 │   │   ├── app.py
-│   │   ├── requirements.txt
+│   │   ├── requirements.txt   # All webpage dependencies
 │   │   └── uploads/
 │   └── frontend/           # React frontend
 │       ├── src/
