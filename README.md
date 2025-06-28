@@ -1,5 +1,5 @@
 
-# 📈 Crop Price Prediction System + Web Interface to publish results - SIH 2024
+#  Crop Price Prediction System + Web Interface to publish results - SIH 2024
 
 Welcome to the **Crop Price Prediction System + Web interface**, a data science, machine learning and Web development project developed for the **Smart India Hackathon (SIH) 2024** by team **Xebec's Crew**.
 
