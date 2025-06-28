@@ -93,19 +93,19 @@ The system is built with a **React frontend** and a **Flask + MongoDB backend**.
  
 ## Webpage Screenshots:
 ### Main Dashboard View (Upload Dataset in csv format and links to other pages)
-![Dashboard](screenshots/Screenshot_2025-06-28_025359.png)
+![Dashboard](Webpage/screenshots/main_page.png)
 
 ### Scroll down to find FAQ's
-![Edit User](screenshots/Screenshot_2025-06-28_025419.png)
+![FAQs](Webpage/screenshots/faqs.png)
 
 ### Admin login page
-![Add User](screenshots/Screenshot_2025-06-28_025437.png)
+![Admin login](Webpage/screenshots/admin_login.png)
 
 ### Admin dashboard (to update delete results in real-time)
-![Add User](screenshots/Screenshot_2025-06-28_025437.png)
+![Admin dashboard](Webpage/screenshots/admin_page.png)
 
 ### Results page (public, entries can be edited from the admin page only)
-![Add User](Webpage/screenshots/Results_page.png)
+![Results](Webpage/screenshots/Results_page.png)
 
 ## Setup Instructions
 
