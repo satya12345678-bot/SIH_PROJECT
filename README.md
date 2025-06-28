@@ -19,6 +19,18 @@ This project focuses on predicting market prices of vegetables using historical 
 ```bash
 SIH_PROJECT/
 │
+├── Webpage/
+│   ├── api/                # Flask backend
+│   │   ├── app.py
+│   │   ├── requirements.txt
+│   │   └── uploads/
+│   └── frontend/           # React frontend
+│       ├── src/
+│       │   ├── components/
+│       │   ├── App.js
+│       │   └── index.js
+│       └── public/
+└── README.md
 ├── data/
 │   ├── raw/                       # Original input files (CSV, PDFs)
 │   │   └── kalimati_tarkari_dataset.csv
