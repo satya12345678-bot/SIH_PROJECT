@@ -1,9 +1,11 @@
 
 #  Crop Price Prediction System + Web Interface to publish results - SIH 2024
 
-Welcome to the **Crop Price Prediction System + Web interface**, a data science, machine learning and Web development project developed for the **Smart India Hackathon (SIH) 2024** by team **Xebec's Crew**.
+Welcome to the Crop Price Prediction System with Web Interface — a comprehensive Data Science, Machine Learning, and Web Development project developed by Team Xebec’s Crew for Smart India Hackathon (SIH) 2024.
 
-This project focuses on predicting market prices of vegetables using historical data and time-series modeling techniques than publishing them on the website, with the ultimate goal of helping farmers and government to make informed decisions on crop sales and logistics.
+This project is centered around forecasting market prices of vegetables using historical data and advanced time-series modeling techniques. The predicted results are then published on a dedicated web platform, aiming to support farmers and government agencies in making data-driven decisions related to crop sales, logistics, and timely market interventions.
+
+Prototype Website : https://sih-project-self.vercel.app/
 
 ---
 
