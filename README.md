@@ -238,7 +238,7 @@ Team Members:
 * Anik Panja *(ML Engineer)*
 * Arkadip Ghara *(ML Engineer)*
 * Siddharth Patel *(Finance Analyst)*
-* Satyabratta Biswal *(Pitch Deck creator)*
+* Satyabratta Biswal *(Frontend Developer)*
 
 ---
 
