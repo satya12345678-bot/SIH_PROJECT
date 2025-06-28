@@ -90,7 +90,26 @@ The system is built with a **React frontend** and a **Flask + MongoDB backend**.
 - **Deployment**:
   - React: Vercel
   - Flask: Render
+## Setup Instructions
 
+### Backend (Flask)
+
+```bash
+cd Webpage/api
+pip install -r requirements.txt
+```
+-Create a .env file in Webpage/api with the following content:
+ MONGO_URI=your_mongodb_connection_string
+-Then start the development server:
+```bash
+python app.py
+```
+### Frontend (React)
+```bash
+cd Webpage/frontend
+npm install
+npm start
+```
 
 # AI-ML Section:
 
@@ -115,6 +134,10 @@ python src/preprocessing.py
 
 ---
 
+
+
+
+
 ### 3. Train Models
 
 #### ARIMA Model:
@@ -131,7 +154,7 @@ python src/lstm_model.py
 
 ---
 
-### 📈 4. Visualize Results
+### 4. Visualize Results
 
 All generated plots (model loss, price forecasts, trend analysis) will be saved in the:
 
