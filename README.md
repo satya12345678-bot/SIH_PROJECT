@@ -56,6 +56,41 @@ SIH_PROJECT/
 ````
 
 ---
+# Development Section:
+## Overview
+
+The system is built with a **React frontend** and a **Flask + MongoDB backend**. It enables users to:
+
+- Upload crop price datasets
+- View predicted **intervention dates** based on LSTM+CNN model forecasts
+- Allow admins to **post, update, and delete** results from a secure admin panel
+- Store all uploaded datasets and results dynamically in MongoDB
+
+**Note**: The LSTM+CNN model runs externally and is not part of this deployed web app. Instead, the web platform serves as a service interface for client interaction and result display.
+
+## Features
+
+- Upload datasets via a public user dashboard
+- Secure admin login with session-based authentication
+- Real-time admin panel to post, update, and delete results
+- Dynamic result storage using MongoDB
+- RESTful API endpoints to handle results and dataset uploads
+- Mobile-responsive design using CSS
+- Deployed frontend (React) via **Vercel**
+- Deployed backend (Flask + MongoDB) via **Render**
+
+## Tech Stack
+
+- **Frontend**: React, CSS, React Router
+- **Backend**: Flask, MongoDB (via PyMongo), Gunicorn (for deployment), Python-dotenv
+- **APIs**: REST APIs for all client-server communication
+- **Database**: MongoDB Atlas
+- **Deployment**:
+  - React: Vercel
+  - Flask: Render
+
+
+# AI-ML Section:
 
 ##  How to Run the Project
 
