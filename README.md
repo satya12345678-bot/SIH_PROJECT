@@ -105,7 +105,7 @@ The system is built with a **React frontend** and a **Flask + MongoDB backend**.
 ![Add User](screenshots/Screenshot_2025-06-28_025437.png)
 
 ### Results page (public, entries can be edited from the admin page only)
-![Add User](screenshots/Screenshot_2025-06-28_025437.png)
+![Add User](Webpage/screenshots/Results_page.png)
 
 ## Setup Instructions
 
